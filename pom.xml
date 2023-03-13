@@ -56,7 +56,10 @@
 </dependency>
 
   </dependencies>
-  <build>
+<profiles>
+<profile>
+<id>smoke</id>
+ <build>  
   <plugins>
          <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -64,10 +67,13 @@
         <version>3.0.0-M9</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
+            <suiteXmlFile>testngSmokeSuite.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
    </plugins>
   </build>
+</profile>
+</profiles>
+ 
   </project>
