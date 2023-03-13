@@ -1,34 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="3" ignored="0" total="5" passed="1" failed="1" skipped="0">
+<testng-results ignored="1" total="2" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-23T17:53:28 IST" name="Default suite" finished-at="2023-02-23T17:53:28 IST" duration-ms="177">
+  <suite started-at="2023-03-13T11:19:35 IST" name="Suite" finished-at="2023-03-13T11:19:45 IST" duration-ms="10727">
     <groups>
+      <group name="SmokeSuite">
+        <method signature="CreateContactWithOrganisationPOMBaseGroups.CreateContactWithOrgPOMTest()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@506ae4d4]" name="CreateContactWithOrgPOMTest" class="vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups"/>
+      </group> <!-- SmokeSuite -->
     </groups>
-    <test started-at="2023-02-23T17:53:28 IST" name="Default test" finished-at="2023-02-23T17:53:28 IST" duration-ms="177">
-      <class name="vtiger.Practice.RetryAnalyserPractice">
-        <test-method retried="true" signature="practiceRetry()[pri:0, instance:vtiger.Practice.RetryAnalyserPractice@3232a28a]" started-at="2023-02-23T17:53:28 IST" name="practiceRetry" finished-at="2023-02-23T17:53:28 IST" duration-ms="23" status="SKIP">
-          <exception class="java.lang.AssertionError">
+    <test started-at="2023-03-13T11:19:35 IST" name="Test" finished-at="2023-03-13T11:19:45 IST" duration-ms="10727">
+      <class name="vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups">
+        <test-method is-config="true" signature="bsConfig()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@506ae4d4]" started-at="2023-03-13T11:19:35 IST" name="bsConfig" finished-at="2023-03-13T11:19:35 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bsConfig -->
+        <test-method is-config="true" signature="bcConfig()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@506ae4d4]" started-at="2023-03-13T11:19:35 IST" name="bcConfig" finished-at="2023-03-13T11:19:45 IST" duration-ms="10579" status="FAIL">
+          <exception class="org.openqa.selenium.remote.http.ConnectionFailedException">
             <message>
-              <![CDATA[null]]>
+              <![CDATA[Unable to establish websocket connection to http://localhost:50398/devtools/browser/d577f891-2f8b-46b9-a6be-eddb686261dc
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-088ELTI', ip: '192.168.24.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: driver.version: ChromeDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.fail(Assert.java:106)
-at vtiger.Practice.RetryAnalyserPractice.practiceRetry(RetryAnalyserPractice.java:14)
+              <![CDATA[org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:50398/devtools/browser/d577f891-2f8b-46b9-a6be-eddb686261dc
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-088ELTI', ip: '192.168.24.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:106)
+at org.openqa.selenium.devtools.Connection.<init>(Connection.java:77)
+at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+at java.base/java.util.Optional.map(Optional.java:265)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+at vtiger.GenericUtilities.BaseClassGroups.bcConfig(BaseClassGroups.java:40)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
@@ -47,32 +65,47 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.remote.http.ConnectionFailedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- practiceRetry -->
-        <test-method retried="true" signature="practiceRetry()[pri:0, instance:vtiger.Practice.RetryAnalyserPractice@3232a28a]" started-at="2023-02-23T17:53:28 IST" name="practiceRetry" finished-at="2023-02-23T17:53:28 IST" duration-ms="3" status="SKIP">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- bcConfig -->
+        <test-method is-config="true" signature="bmConfig()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@506ae4d4]" started-at="2023-03-13T11:19:45 IST" name="bmConfig" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1678686585766" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bmConfig -->
+        <test-method signature="CreateContactWithOrgPOMTest()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@506ae4d4]" started-at="2023-03-13T11:19:45 IST" name="CreateContactWithOrgPOMTest" finished-at="2023-03-13T11:19:45 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.remote.http.ConnectionFailedException">
             <message>
-              <![CDATA[null]]>
+              <![CDATA[Unable to establish websocket connection to http://localhost:50398/devtools/browser/d577f891-2f8b-46b9-a6be-eddb686261dc
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-088ELTI', ip: '192.168.24.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: driver.version: ChromeDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.fail(Assert.java:106)
-at vtiger.Practice.RetryAnalyserPractice.practiceRetry(RetryAnalyserPractice.java:14)
+              <![CDATA[org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:50398/devtools/browser/d577f891-2f8b-46b9-a6be-eddb686261dc
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-088ELTI', ip: '192.168.24.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:106)
+at org.openqa.selenium.devtools.Connection.<init>(Connection.java:77)
+at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+at java.base/java.util.Optional.map(Optional.java:265)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+at vtiger.GenericUtilities.BaseClassGroups.bcConfig(BaseClassGroups.java:40)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
@@ -91,103 +124,23 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.remote.http.ConnectionFailedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- practiceRetry -->
-        <test-method retried="true" signature="practiceRetry()[pri:0, instance:vtiger.Practice.RetryAnalyserPractice@3232a28a]" started-at="2023-02-23T17:53:28 IST" name="practiceRetry" finished-at="2023-02-23T17:53:28 IST" duration-ms="6" status="SKIP">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.fail(Assert.java:106)
-at vtiger.Practice.RetryAnalyserPractice.practiceRetry(RetryAnalyserPractice.java:14)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- CreateContactWithOrgPOMTest -->
+        <test-method is-config="true" signature="amConfig()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@506ae4d4]" started-at="2023-03-13T11:19:45 IST" name="amConfig" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1678686585790" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- practiceRetry -->
-        <test-method signature="practiceRetry()[pri:0, instance:vtiger.Practice.RetryAnalyserPractice@3232a28a]" started-at="2023-02-23T17:53:28 IST" name="practiceRetry" finished-at="2023-02-23T17:53:28 IST" duration-ms="3" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.fail(Assert.java:106)
-at vtiger.Practice.RetryAnalyserPractice.practiceRetry(RetryAnalyserPractice.java:14)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- amConfig -->
+        <test-method is-config="true" signature="acConfig()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@506ae4d4]" started-at="2023-03-13T11:19:45 IST" name="acConfig" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1678686585808" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- practiceRetry -->
-        <test-method signature="practiceRetry1()[pri:0, instance:vtiger.Practice.RetryAnalyserPractice@3232a28a]" started-at="2023-02-23T17:53:28 IST" name="practiceRetry1" finished-at="2023-02-23T17:53:28 IST" duration-ms="21" status="PASS">
+        </test-method> <!-- acConfig -->
+        <test-method is-config="true" signature="asConfig()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@506ae4d4]" started-at="2023-03-13T11:19:45 IST" name="asConfig" finished-at="2023-03-13T11:19:45 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- practiceRetry1 -->
-      </class> <!-- vtiger.Practice.RetryAnalyserPractice -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- asConfig -->
+      </class> <!-- vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

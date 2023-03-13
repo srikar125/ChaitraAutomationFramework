@@ -14,8 +14,10 @@ public class PropertyFilePractice {
 		//Load file input stream in to properties
 		pobj.load(fis);
 		//read the value using key
-		String value=pobj.getProperty("browser");
-		System.out.println(value);
+		String BROWSER=pobj.getProperty("browser");
+		String URL=pobj.getProperty("url");
+		System.out.println(BROWSER);
+		System.out.println(URL);
 
 	}
 
