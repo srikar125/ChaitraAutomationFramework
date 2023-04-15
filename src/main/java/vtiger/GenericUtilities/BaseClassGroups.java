@@ -2,6 +2,7 @@ package vtiger.GenericUtilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -37,7 +38,9 @@ public class BaseClassGroups {
 		String URL=putil.readDataFromPropertyFile("url");
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions option = new ChromeOptions();
+            option.addArguments("--remote-allow-origins=*");
+			driver = new ChromeDriver(option);
 			System.out.println("Chrome Browser is launched");
 		} else if (BROWSER.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();

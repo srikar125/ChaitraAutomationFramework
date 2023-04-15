@@ -1,125 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-11T16:18:33 IST" name="Default suite" finished-at="2023-04-11T16:22:27 IST" duration-ms="233793">
+  <suite started-at="2023-04-15T13:19:26 IST" name="Suite" finished-at="2023-04-15T13:20:33 IST" duration-ms="67820">
     <groups>
+      <group name="SmokeSuite">
+        <method signature="CreateContactWithOrganisationPOMBaseGroups.CreateContactWithOrgPOMTest()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@273e7444]" name="CreateContactWithOrgPOMTest" class="vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups"/>
+      </group> <!-- SmokeSuite -->
     </groups>
-    <test started-at="2023-04-11T16:18:33 IST" name="Default test" finished-at="2023-04-11T16:22:27 IST" duration-ms="233793">
-      <class name="vtiger.OrganisationsTests.CreateMultipleOrganisaton">
-        <test-method signature="createMultipleOrg(java.lang.String,java.lang.String)[pri:0, instance:vtiger.OrganisationsTests.CreateMultipleOrganisaton@21282ed8]" started-at="2023-04-11T16:18:35 IST" name="createMultipleOrg" data-provider="OrgData" finished-at="2023-04-11T16:19:11 IST" duration-ms="35920" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Wipro]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Apparel]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2023-04-15T13:19:26 IST" name="Test" finished-at="2023-04-15T13:20:33 IST" duration-ms="67820">
+      <class name="vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups">
+        <test-method is-config="true" signature="bsConfig()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@273e7444]" started-at="2023-04-15T13:19:26 IST" name="bsConfig" finished-at="2023-04-15T13:19:26 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createMultipleOrg -->
-        <test-method signature="createMultipleOrg(java.lang.String,java.lang.String)[pri:0, instance:vtiger.OrganisationsTests.CreateMultipleOrganisaton@21282ed8]" started-at="2023-04-11T16:19:11 IST" name="createMultipleOrg" data-provider="OrgData" finished-at="2023-04-11T16:19:43 IST" duration-ms="32693" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Oinfy]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Chemicals]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- bsConfig -->
+        <test-method is-config="true" signature="bcConfig()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@273e7444]" started-at="2023-04-15T13:19:26 IST" name="bcConfig" finished-at="2023-04-15T13:19:34 IST" duration-ms="8064" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createMultipleOrg -->
-        <test-method signature="createMultipleOrg(java.lang.String,java.lang.String)[pri:0, instance:vtiger.OrganisationsTests.CreateMultipleOrganisaton@21282ed8]" started-at="2023-04-11T16:19:43 IST" name="createMultipleOrg" data-provider="OrgData" finished-at="2023-04-11T16:20:17 IST" duration-ms="33268" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[PWC]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Banking]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- bcConfig -->
+        <test-method is-config="true" signature="bmConfig()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@273e7444]" started-at="2023-04-15T13:19:34 IST" name="bmConfig" finished-at="2023-04-15T13:19:39 IST" duration-ms="4843" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createMultipleOrg -->
-        <test-method signature="createMultipleOrg(java.lang.String,java.lang.String)[pri:0, instance:vtiger.OrganisationsTests.CreateMultipleOrganisaton@21282ed8]" started-at="2023-04-11T16:20:17 IST" name="createMultipleOrg" data-provider="OrgData" finished-at="2023-04-11T16:20:49 IST" duration-ms="32065" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[LT]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Banking]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- bmConfig -->
+        <test-method signature="CreateContactWithOrgPOMTest()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@273e7444]" started-at="2023-04-15T13:19:39 IST" name="CreateContactWithOrgPOMTest" finished-at="2023-04-15T13:20:23 IST" duration-ms="44175" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createMultipleOrg -->
-        <test-method signature="createMultipleOrg(java.lang.String,java.lang.String)[pri:0, instance:vtiger.OrganisationsTests.CreateMultipleOrganisaton@21282ed8]" started-at="2023-04-11T16:20:49 IST" name="createMultipleOrg" data-provider="OrgData" finished-at="2023-04-11T16:21:20 IST" duration-ms="31222" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Amdocs]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Chemicals]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- CreateContactWithOrgPOMTest -->
+        <test-method is-config="true" signature="amConfig()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@273e7444]" started-at="2023-04-15T13:20:23 IST" name="amConfig" finished-at="2023-04-15T13:20:33 IST" duration-ms="9822" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createMultipleOrg -->
-        <test-method signature="createMultipleOrg(java.lang.String,java.lang.String)[pri:0, instance:vtiger.OrganisationsTests.CreateMultipleOrganisaton@21282ed8]" started-at="2023-04-11T16:21:20 IST" name="createMultipleOrg" data-provider="OrgData" finished-at="2023-04-11T16:21:53 IST" duration-ms="33400" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Amazon]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Construction]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- amConfig -->
+        <test-method is-config="true" signature="acConfig()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@273e7444]" started-at="2023-04-15T13:20:33 IST" name="acConfig" finished-at="2023-04-15T13:20:33 IST" duration-ms="820" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createMultipleOrg -->
-        <test-method signature="createMultipleOrg(java.lang.String,java.lang.String)[pri:0, instance:vtiger.OrganisationsTests.CreateMultipleOrganisaton@21282ed8]" started-at="2023-04-11T16:21:53 IST" name="createMultipleOrg" data-provider="OrgData" finished-at="2023-04-11T16:22:27 IST" duration-ms="33632" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Lumen]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Energy]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- acConfig -->
+        <test-method is-config="true" signature="asConfig()[pri:0, instance:vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups@273e7444]" started-at="2023-04-15T13:20:33 IST" name="asConfig" finished-at="2023-04-15T13:20:33 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createMultipleOrg -->
-      </class> <!-- vtiger.OrganisationsTests.CreateMultipleOrganisaton -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- asConfig -->
+      </class> <!-- vtiger.ContactsTests.CreateContactWithOrganisationPOMBaseGroups -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
