@@ -10,7 +10,7 @@ public class GenericUtilityPractice {
 
 	public static void main(String[] args) throws Exception {
 		PropertyFileUtility putil=new PropertyFileUtility();
-		String value=putil.readDataFromPropertyFile("browser");
+		String value=putil.readDataFromPropertyFile("url");
 		System.out.println(value);
 		
 		ExcelFileUtility eutil=new ExcelFileUtility();
@@ -27,7 +27,9 @@ public class GenericUtilityPractice {
 		JavaUtility jutil=new JavaUtility();
 		System.out.println(jutil.getRandomNumber());		
 		String d=jutil.getSysemDate();
+		String dt=jutil.getSysemDateInFormat();
 		System.out.println(d);
+		System.out.println(dt);
 	}
 
 }

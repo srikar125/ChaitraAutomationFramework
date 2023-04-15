@@ -12,9 +12,9 @@ public class HomePage extends WebDriverUtility {
 	@FindBy(linkText="Organizations") private WebElement OrganisationsLnk;
 	@FindBy(linkText="Contacts") private WebElement ContactsLnk;
 	@FindBy(linkText="Opportunities") private WebElement OpportunitiesLnk;
-	@FindBy(xpath="//img[@src='themes/softed/images/user.PNG']") private WebElement AdminLnk;
+	@FindBy(xpath="//td[@class='genHeaderSmall']/following-sibling::td/img") private WebElement AdminLnk;
 	@FindBy(linkText = "Sign Out") private WebElement SignOutLnk;
-	private WebDriver driver;
+	//private WebDriver driver;
 	
 	public HomePage(WebDriver driver)
 	{
@@ -41,9 +41,9 @@ public class HomePage extends WebDriverUtility {
 		return SignOutLnk;
 	}
 
-	public WebDriver getDriver() {
-		return driver;
-	}
+	/*
+	 * public WebDriver getDriver() { return driver; }
+	 */
 	
 	public void orgClick()
 	{
@@ -54,9 +54,9 @@ public class HomePage extends WebDriverUtility {
 	{
 		ContactsLnk.click();
 	}
-	public void logoutofApp() throws Exception
-	{
-		Thread.sleep(5000);
+	
+	public void logoutofApp(WebDriver driver) throws Exception 
+	{ 
 		mouseHover(driver, AdminLnk);
 		SignOutLnk.click();
 	}

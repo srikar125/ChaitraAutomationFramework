@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -43,7 +44,10 @@ public class CreateContactWithOrganisationPOM {
 	if(BROWSER.equalsIgnoreCase("chrome"))
 	{
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		ChromeOptions option = new ChromeOptions();
+        option.addArguments("--remote-allow-origins=*");
+		driver = new ChromeDriver(option);
+		
 	}else if(BROWSER.equalsIgnoreCase("firefox"))
 	{
 		WebDriverManager.firefoxdriver().setup();
@@ -97,7 +101,7 @@ public class CreateContactWithOrganisationPOM {
 	{
 		System.out.println("FAIL");
 	}
-	hp.logoutofApp();
+	hp.logoutofApp(driver);
 	driver.close();
 
 }

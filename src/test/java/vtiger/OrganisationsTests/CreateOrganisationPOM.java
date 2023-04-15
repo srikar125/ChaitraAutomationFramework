@@ -1,20 +1,10 @@
 package vtiger.OrganisationsTests;
 
-import java.awt.Desktop.Action;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.time.Duration;
-import java.util.Properties;
-
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -30,7 +20,7 @@ import vtiger.ObjectRepository.OrganisationInfoPage;
 import vtiger.ObjectRepository.OrgnanisatonsPage;
 
 public class CreateOrganisationPOM {
-
+  //  public static WebDriver driver;
 	public static void main(String[] args) throws Exception {
 		// Create all necessary objects
 		PropertyFileUtility putil=new PropertyFileUtility();
@@ -50,7 +40,9 @@ public class CreateOrganisationPOM {
 		// Launch the browser-- Example for Run time polymorphism
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions option = new ChromeOptions();
+            option.addArguments("--remote-allow-origins=*");
+			driver = new ChromeDriver(option);
 		} else if (BROWSER.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
@@ -88,8 +80,10 @@ public class CreateOrganisationPOM {
 	
 	//	WebElement ele=driver.findElement(By.xpath("//img[@style='padding: 0px;padding-left:5px']"));
 	//	Actions act=new Actions(driver);
+	//	Thread.sleep(5000);
 	//	act.moveToElement(ele).build().perform();
-		hp.logoutofApp();
+	Thread.sleep(5000);
+		hp.logoutofApp(driver);
 		driver.close();
 
 	}

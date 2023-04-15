@@ -15,6 +15,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -53,7 +54,9 @@ public class CreateOrganisationPOMBaseRetry {
 		// Launch the browser-- Example for Run time polymorphism
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions option = new ChromeOptions();
+            option.addArguments("--remote-allow-origins=*");
+			driver = new ChromeDriver(option);
 		} else if (BROWSER.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
@@ -77,6 +80,7 @@ public class CreateOrganisationPOMBaseRetry {
 		//Create new organisation name textfield
 		CreateNewOrganisationPage cnop=new CreateNewOrganisationPage(driver);
 		cnop.createOrganisation(ORGNAME);
+		Assert.fail();
 		OrganisationInfoPage oip=new OrganisationInfoPage(driver);
 		String orgheader=oip.headerText();
 		Assert.assertTrue(orgheader.contains(ORGNAME));
@@ -85,7 +89,7 @@ public class CreateOrganisationPOMBaseRetry {
 	//	WebElement ele=driver.findElement(By.xpath("//img[@style='padding: 0px;padding-left:5px']"));
 	//	Actions act=new Actions(driver);
 	//	act.moveToElement(ele).build().perform();
-		hp.logoutofApp();
+		hp.logoutofApp(driver);
 		driver.close();
 
 	}

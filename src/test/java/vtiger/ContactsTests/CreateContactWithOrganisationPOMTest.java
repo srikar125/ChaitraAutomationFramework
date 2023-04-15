@@ -99,7 +99,7 @@ public class CreateContactWithOrganisationPOMTest {
 	{
 		System.out.println("FAIL");
 	}
-	hp.logoutofApp();
+	hp.logoutofApp(driver);
 	driver.close();
 
 }

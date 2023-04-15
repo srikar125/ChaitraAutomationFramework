@@ -40,7 +40,7 @@ public class ListnersImplementation implements ITestListener {
 		JavaUtility jutil=new JavaUtility();
 		String screenShotName=methodName+"-"+jutil.getSysemDateInFormat();
 		try {
-			wutil.takeScreenShot(BaseClass.sdriver, screenShotName);
+			String path=wutil.takeScreenShot(BaseClass.sdriver, screenShotName);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

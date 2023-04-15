@@ -55,6 +55,8 @@ public class CreateOrganisationPOMBase extends BaseClass {
 		} else {
 			System.out.println("Fail");
 		}
+		
+	
 		// Click on save button
 
 		// WebElement ele=driver.findElement(By.xpath("//img[@style='padding:

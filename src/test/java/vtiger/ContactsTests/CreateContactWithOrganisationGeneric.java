@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -35,7 +36,9 @@ public class CreateContactWithOrganisationGeneric {
 	if(BROWSER.equalsIgnoreCase("chrome"))
 	{
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		ChromeOptions option = new ChromeOptions();
+        option.addArguments("--remote-allow-origins=*");
+		driver = new ChromeDriver(option);
 	}else if(BROWSER.equalsIgnoreCase("firefox"))
 	{
 		WebDriverManager.firefoxdriver().setup();
@@ -47,7 +50,8 @@ public class CreateContactWithOrganisationGeneric {
 	// driver.manage().window().maximize();
 	wutil.maxmiseWindow(driver);
 	// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-	wutil.waitForPageLoad(driver);driver.get(URL);
+	wutil.waitForPageLoad(driver);
+	driver.get(URL);
 	// Login to Application
 	driver.findElement(By.name("user_name")).sendKeys(USERNAME);driver.findElement(By.name("user_password")).sendKeys(PASSWORD);driver.findElement(By.id("submitButton")).click();
 	// Click on Organisations Link
@@ -94,7 +98,8 @@ public class CreateContactWithOrganisationGeneric {
 	WebElement ele = driver.findElement(By.xpath("//img[@style='padding: 0px;padding-left:5px']"));
 	// Actions act=new Actions(driver);
 	// act.moveToElement(ele).build().perform();
-	wutil.mouseHover(driver,ele);driver.findElement(By.linkText("Sign Out")).click();
+	wutil.mouseHover(driver,ele);
+	driver.findElement(By.linkText("Sign Out")).click();
 	driver.close();
 
 }

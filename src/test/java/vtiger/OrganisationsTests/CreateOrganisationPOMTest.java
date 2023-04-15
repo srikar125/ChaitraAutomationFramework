@@ -90,7 +90,7 @@ public class CreateOrganisationPOMTest {
 	//	WebElement ele=driver.findElement(By.xpath("//img[@style='padding: 0px;padding-left:5px']"));
 	//	Actions act=new Actions(driver);
 	//	act.moveToElement(ele).build().perform();
-		hp.logoutofApp();
+		hp.logoutofApp(driver);
 		driver.close();
 
 	}

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 public class OrgnanisatonsPage {
 
 	@FindBy(xpath = "//img[@title='Create Organization...']") private WebElement CreateOrgLnk;
-	private WebDriver driver;
+//	private WebDriver driver;
 
 	public OrgnanisatonsPage(WebDriver driver)
 	{

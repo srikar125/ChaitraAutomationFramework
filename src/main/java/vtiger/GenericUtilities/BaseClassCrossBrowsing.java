@@ -2,6 +2,7 @@ package vtiger.GenericUtilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -42,8 +43,9 @@ public class BaseClassCrossBrowsing {
 		String URL=putil.readDataFromPropertyFile("url");
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-			System.out.println("Chrome Browser is launched");
+			ChromeOptions option = new ChromeOptions();
+            option.addArguments("--remote-allow-origins=*");
+			driver = new ChromeDriver(option);	
 		} else if (BROWSER.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
@@ -68,7 +70,7 @@ public class BaseClassCrossBrowsing {
 	public void amConfig() throws Exception
 	{
 	HomePage hp=new HomePage(driver);
-	hp.logoutofApp();
+	hp.logoutofApp(driver);
 	System.out.println("Logout of App Succesful");
 	}
 	

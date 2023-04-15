@@ -2,6 +2,7 @@ package vtiger.OrganisationsTests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -39,7 +40,9 @@ public class CreateMultipleOrganisaton {
 		// Launch the browser-- Example for Run time polymorphism
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions option = new ChromeOptions();
+            option.addArguments("--remote-allow-origins=*");
+			driver = new ChromeDriver(option);
 		} else if (BROWSER.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
@@ -78,14 +81,14 @@ public class CreateMultipleOrganisaton {
 	//	WebElement ele=driver.findElement(By.xpath("//img[@style='padding: 0px;padding-left:5px']"));
 	//	Actions act=new Actions(driver);
 	//	act.moveToElement(ele).build().perform();
-		hp.logoutofApp();
+		hp.logoutofApp(driver);
 		driver.close();
 
 	}
 	@DataProvider(name = "OrgData")
 	public Object[][] getData() throws Exception
 	{
-		Object[][] data=eutil.readMultipleDataIntoDataProvider("MulitpleOrganisations");
+		Object[][] data=eutil.readMultipleDataIntoDataProvider("MultpleOrganisations");
 		
 		return data;
 	}

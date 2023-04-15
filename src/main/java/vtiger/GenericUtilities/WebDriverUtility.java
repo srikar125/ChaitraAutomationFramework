@@ -31,7 +31,7 @@ import com.google.common.io.Files;
  *
  */
 public class WebDriverUtility {
-	private static final String ScreenShotName = null;
+	private static final String ScreenShotName =null;
 	private TakesScreenshot driver;
 
 	/**
@@ -139,11 +139,12 @@ public class WebDriverUtility {
 	 * 
 	 * @param driver
 	 * @param element
+	 * @throws Exception 
 	 */
-	public void mouseHover(WebDriver driver, WebElement element) {
+	public void mouseHover(WebDriver driver, WebElement element) throws Exception {
 		Actions act = new Actions(driver);
-		act.moveToElement(element).perform();
-		;
+		Thread.sleep(5000);
+		act.moveToElement(element).perform();	;
 	}
 
 	/**
@@ -235,7 +236,7 @@ public class WebDriverUtility {
 	 * @param index
 	 */
 	public void switchToFrame(WebDriver driver, int index) {
-		driver.switchTo().frame(0);
+		driver.switchTo().frame(index);
 	}
 
 	/**

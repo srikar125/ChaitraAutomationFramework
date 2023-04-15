@@ -63,7 +63,7 @@ public class BaseClassGroupsRegression {
 	public void amConfig() throws Exception
 	{
 	HomePage hp=new HomePage(driver);
-	hp.logoutofApp();
+	hp.logoutofApp(driver);
 	System.out.println("Logout of App Succesful");
 	}
 	
